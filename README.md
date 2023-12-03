@@ -1,8 +1,9 @@
 # Farmcare_Major
 Video Link : https://youtu.be/mb4DozY5dtk?si=oyPqsw_wvFCitEq2
 <hr>
-# Screenshots 
 
+# Screenshots
+<hr>
 
 ![WhatsApp Image 2023-11-30 at 16 49 02_d1630d6f](https://github.com/aditimahabole/Farmcare_Major/assets/78752342/ee470a5f-6613-4078-a87c-1106f4551929)
 
