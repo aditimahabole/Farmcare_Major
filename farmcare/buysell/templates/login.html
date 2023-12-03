@@ -1,0 +1,49 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Farmcare-Login</title>
+	<link rel="icon" href="Images\farmcare_logo.png" sizes="32x32" />
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+
+<body >
+<div class="main container">
+	<div style="display:flex; align-items:center; justify-content:center; ">
+        <a href="{% url 'login_page' %}">
+        <img
+          style="width: 300px; align-self:center;"
+          src="{% static './Images/farmcare_logo.png' %}" />
+        </a>
+    </div>
+	<br /><br />
+
+  {% if messages %}
+    <div class="alert alert-primary" role="alert">
+        {% for message in messages %}
+        {{message}}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+
+<form  class="shadow-lg p-5 rounded" method='POST'>
+	{% csrf_token %}
+	<h1> Login </h1>
+    <hr>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" required  name = "username" placeholder="Enter Username">
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" name="password" placeholder="Password">
+    </div>
+	<p>Don't have an account . <a href={% url 'register_page' %}>Register</a></p>
+    <button type="submit" class="btn btn-success">Login</button>
+  </form>
+</div>
+</body>
+</html>

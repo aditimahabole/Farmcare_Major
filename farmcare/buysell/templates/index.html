@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Farmcare</title>
+    <link rel="icon" sizes="32x32" href="{% static './Images/logo.png' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static './style.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  </head>
+  <header>
+    <div class="brand headers" style ="
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; align-items:center;">
+      <img style="width: 280px" src="{% static './Images/farmcare_logo.png' %}" />
+      <div style="font-size:30px; color: #0d1b69; font-family: 'Poppins'; sans-serif; display:flex; flex-direction:row;justify-content:space-between;  padding:10px; width:500px;"> Welcome {{request.user.username}}
+        <a href={% url 'logout_page' %}  style=" border: none;
+        color: white;
+        font-weight: 700;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 6px 8px;
+        cursor: pointer;
+        border: 1px solid #0d1b69;
+        width: 35%;
+        background-color: #0d1b69;
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        border-radius: 10px; " 
+        onMouseOver="this.style.color= '#0d1b69'; this.style.background: 'white'; "
+       
+        >Logout</a> </div>
+    </div>
+    <a href="mandi" target="_self"
+      ><input type="button" class="mbutton" value="Mandi Prices »"
+    /></a>
+   
+  </header>
+  <body>
+    
+    <div class="node" style=" font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;">
+      <div class="child">
+        <h1>Modern Farmculture<br />marketplace for everyone.<br /><br /></h1>
+        <div class="subchild">
+          <span class="subhead">Sell Crops<br /></span>
+          <span class="text">Upscale farming business with us.<br /></span
+          ><br />
+          <a href="sell" target="_self"
+            >
+            <input type="button" class="button" value="Sell »"/>
+        </a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Quote best price<br /></span>
+          <span class="text">List price in our database.<br /></span><br />
+          <a href="list" target="_self"
+            ><input type="button" class="button" value="List Now »"
+          /></a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Crop Recommendation<br /></span>
+          <span class="text"
+            >Get to know the best suitable crop for you.<br /></span
+          ><br />
+          <a href="recommend" target="_self"
+            ><input type="button" class="button" value="Get Recommendations »"
+          /></a>
+        </div>
+        <br /><br />
+        <div class="subchild">
+          <span class="subhead">Fertilizer Prediction<br /></span>
+          <span class="text"
+            >Predict perfect fertilizer for your crop field<br /></span
+          ><br />
+          <a href="predict" target="_self"
+            ><input type="button" class="button" value="Get Predictions »"
+          /></a>
+        </div>
+        <br /><br />
+        <p>Copyright © 2023 Farmcare</p>
+      </div>
+      <div class="child">
+        <img
+          src="{% static './Images/illustration.jpg' %}"
+          class="illustration"
+        />
+      </div>
+    </div>
+  </body>
+</html>

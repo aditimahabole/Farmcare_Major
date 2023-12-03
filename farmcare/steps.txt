@@ -1,0 +1,95 @@
+# start
+# make a folder I named it farmcare
+# installing django 
+--> pip install Django
+# to check if django is installed do following 
+--> python 
+--> >>import django
+--> >>django.__version__
+#version will appear if installed and then do Ctrl Z for quiting
+#to start making django application
+--> django-admin startproject farmcare
+# navigate to farmcare agin 
+--> cd farmcare 
+# then creating virtual env for storing dependencies
+--> pip install virtualenv
+# to create virtual env like package.json in node / react
+--> virtualenv env 
+# activate the env (please use cmd not powershell keep in mind!)
+--> cd env 
+--> cd Scripts
+--> activate
+(env) C:\Users\ADITI KIRAN MAHABOLE\Desktop\farmcare\farmcare\env\Scripts> 
+// (it will look like this)
+# now go back to farmcare folder  by doing bellow 2 times
+--> cd .. 
+--> cd ..
+//(env) C:\Users\ADITI KIRAN MAHABOLE\Desktop\farmcare\farmcare> (it will look like this)
+--> pip install django (do it again)
+# now to make an app 
+--> python manage.py startapp buysell  // we can create home , accounts , whatever 
+# to start django app
+--> python manage.py migrate
+--> python manage.py runserver // after this copy url and paste in google chrome, app will start
+#if you want to change the port then you can do this , i have not done it but you can if you want
+--> python manage.py runserver // [a.b.c.d]:[port-number] ex -> 0.0.0.0:5000
+# see farmcare is my main app an buysell is side app so in main app we have to include other apps
+# so we will include in setting.py file of farmcare folder in INSTALLED_APPS = []
+
+# returning html template as response  / returning data from backend
+# logical part of code is written in views
+# routing done in urls.py
+# schema / tables in models.py
+#------------DEPENDENCIES TO INSTALL-----------------------
+pip install joblib
+pip install scikit-learn
+pip install requests
+pip install numpy 
+pip install pandas
+pip install tensorflow
+pip install pymysql
+# to make pymysql work inside __init__.py of farmcare folder and buysell folder add these lines
+(import pymysql)
+(pymysql.install_as_MySQLdb())
+# this will initialize to use database
+# we have to download these when our environment is activate that is after doing this (in command prompt not powershell)
+cd farmcare 
+cd env 
+cd Scripts
+activate
+# and then do pip installs but when my env was activate it was not able to download tensorflow
+# so I did not activate the env and directly pip installed in terminal so it worked 
+# -----------------MAKING MODELS---------------
+# models are basically tables so we have Form Model inside buysell/models.py 
+# we also have model names MandiDetails that is I actually stored API detials inside this table
+# so that I can perform queries on it as directly it was difficult to do on API data
+# so basically I implemented search bar using (__icontains) if you know django you know ,if not then study first
+# Making models work you have to write some commands 
+--> python manage.py makemigrations
+# above command will check if we have made some changes in our Schema like IntergerField to CharField like that
+-->python manage.py migrate 
+# this will make files like 0007_file.py each time we make changes (you can see inside buysell/migrations)
+~ REMEMBER whenever you make changes to schema run (python manage.py makemigrations) this command after saving
+#--------------ACCESING STATIC FILES-------------
+# so static is a folder made to store things like css files , images okay!?
+# but django does not know so like we after making folder named 'static' only we have to run command
+# but wait first we have to do something inside farmcare/settings.py 
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'buysell/static'),
+]
+# the above tells where our static files are locates so in our case its in buysell/static
+STATIC_ROOT = os.path.join(BASE_DIR,'buysell/assets')
+# now we are telling django to create a folder where he will save these files so we named it as assets 
+#  and location is inside buysell only (buysell/assets)
+# untill nothing has been done we just wrote some code
+# now time to write some command
+-->python manage.py collectionstatic
+#  this will create assets folder for django to recognise (i dont know why we made we just made we will be uing static folder only )
+# now to use css files come to html files you made and at top you have to write
+({% load static %} ) this is necessary 
+
+
+
+
+
+

@@ -1,0 +1,80 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{% static './login-style.css' %}"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+  </head>
+  <style> 
+    .classes_info
+    {
+
+      
+      display:flex;
+      flex-direction:row;
+      justify-content:space-between;
+      height:400px;
+      align-items:center;
+      background: linear-gradient(45deg,  #738026, rgb(7, 37, 108));
+      margin:10px;
+      color:white;
+      border-radius:10px;
+      font-family: 'Poppins'; sans-serif; 
+
+    }
+    .classes_box
+    {
+      height:300px;
+      width:200px;
+      
+      padding:10px;
+      
+      border-radius:10px;
+      margin:10px;
+
+    }
+  </style>
+  <body>
+    
+    <div class="main">
+      
+     
+      <a href="{% url 'home'%}"
+        ><img
+          style="width: 300px"
+          src="{% static './Images/farmcare_logo.png' %}" /></a
+      ><br /><br />
+      <div class="classes_info">
+        <div class="classes_box">
+          <h3>Class 1 </h3>
+          <hr>
+          <p>
+            These fertilizers provide the essential nutrients required for plant growth, including nitrogen (N), phosphorus (P), and potassium (K), often referred to as NPK fertilizers.
+          </p>
+        </div>
+        <div class="classes_box">
+          <h3>Class 2 </h3>
+          <hr>
+          <p>
+            These include elements like sulfur (S), calcium (Ca), magnesium (Mg), and micronutrients like iron (Fe), zinc (Zn), and copper (Cu).
+          </p>
+        </div>
+        <div class="classes_box">
+          <h3>Class 3 </h3>
+          <hr>
+          <p>
+            These fertilizers may include a combination of primary and secondary nutrients along with micronutrients.
+          </p>
+        </div>
+      </div>
+      <br></br>
+      <span class="pr">The recommended fertilizer belongs to class :  <b>{{ans}}</b></span>
+    </div>
+  </body>
+</html>
