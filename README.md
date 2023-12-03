@@ -1,5 +1,5 @@
 # Farmcare_Major
-
+Please follow step.txt if you wanna create by yourself
 Video Link : https://youtu.be/mb4DozY5dtk?si=oyPqsw_wvFCitEq2
 <hr>
 
