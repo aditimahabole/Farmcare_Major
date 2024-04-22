@@ -1,6 +1,8 @@
 # Farmcare_Major
-Please follow step.txt if you wanna create by yourself
-Video Link : https://youtu.be/mb4DozY5dtk?si=oyPqsw_wvFCitEq2
+
++ Please follow step.txt if you wanna create by yourself
+
++ Video Link : https://youtu.be/mb4DozY5dtk?si=oyPqsw_wvFCitEq2
 <hr>
 FarmCare is a Django-based Python project that seamlessly integrates machine learning into four essential use cases for farmers. Firstly, it empowers farmers to sell their crops at self-determined prices, reducing dependence on middlemen. Secondly, by inputting soil nutrient percentages, farmers receive personalized fertilizer recommendations. Thirdly, leveraging data such as rainfall, humidity, and soil nutrients, the platform assists farmers in determining the most suitable crops for their specific soil conditions. Lastly, FarmCare features a live Mandi API, providing real-time crop prices from across the globe, aiding farmers in making informed decisions. This comprehensive solution enhances agricultural efficiency and autonomy for farmers through technology-driven insights and market information.
 <hr>
