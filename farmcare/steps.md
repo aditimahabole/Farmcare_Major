@@ -1,4 +1,4 @@
-Sure Aditi! Here's a nicely formatted and beginner-friendly version of your notes, suitable for a `README.md` file on GitHub:
+
 
 ---
 
