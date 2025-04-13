@@ -252,5 +252,3 @@ Useful for building search bars or filters.
 ---
 
 ## ✨ Happy Coding!
-
-Let me know if you'd like me to turn this into a downloadable `README.md` file!
